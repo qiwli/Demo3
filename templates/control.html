@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制语句Demo</title>
+</head>
+<body>
+    <div>
+        {% if age > 18 %}  <!--jinja2模板中中if，for语句都要用endif，endfor进行结尾-->
+        您已经满18岁，可以进网吧 <br>
+        {% elif age==18%}
+        您刚满18岁，需要父母陪同才能进入！<br>
+        {% else %}
+        您未满18岁，不能进入网吧
+        {% endif %}
+    </div>
+    <div>
+        {% for book in books %}   <!--jinja2中不存在break语句，所以一次循环中把所有循环条件都写出来-->
+        图书名称：{{book.name}},图书作者：{{book.author}}<br>
+        {% endfor %}
+    </div>
+</body>
+</html>
